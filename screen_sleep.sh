@@ -1,6 +1,3 @@
 #!/bin/bash
 
-sleep 1
-echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
-
-
+xrandr -d :0 --output DPI-1 --brightness 0
