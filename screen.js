@@ -2,6 +2,19 @@
 
 const url = require('url');
 const http = require('http');
+const os = require('os');
+const interfaces = os.networkInterfaces();
+const addresses = [];
+
+for (const interface in interfaces) {
+  for (const subinterface of interfaces[interface]) {
+    if (subinterface.family === 'IPv4' && !subinterface.internal) {
+      addresses.push(subinterface.address);
+    }
+  }
+}
+
+const ipAddress = addresses[0]
 
 // Create an instance of the http server to handle HTTP requests
 let app = http.createServer((req, res) => {
@@ -24,5 +37,5 @@ let app = http.createServer((req, res) => {
 	}
 });
 
-app.listen(3000);
+app.listen(3000, ipAddress);
 console.log('Node server running...');
