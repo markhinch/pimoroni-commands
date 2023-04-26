@@ -1,0 +1,19 @@
+{
+  "name": "screen",
+  "version": "0.0.1",
+  "description": "Screen commands for remote calling",
+  "main": "screen.js",
+  "scripts": {
+    "start": "node screen.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markhinch/pimoroni-commands.git"
+  },
+  "author": "Mark Hinch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markhinch/pimoroni-commands/issues"
+  },
+  "homepage": "https://github.com/markhinch/pimoroni-commands#readme"
+}
